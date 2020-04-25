@@ -1,0 +1,122 @@
+{
+  "projects": [
+
+    {
+      "id": "8",
+      "name": "hk hair studio w/ api",
+      "technologies": "node.js express mongodb html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/hairsalon",
+      "img": {
+        "webp": "../resources/img/hairsalon.webp",
+        "gif": "../resources/img/hairsalon.gif"
+      },
+      "brief": "To create a realistic client website with all the necessary pages, designed first for mobile with desktop optimisation added as an extension. <br/> The website is to be rendered client-side with dynamic content produced using a seperate api. <br/>The API is RESTful - to be built using Node.js, Express and MongoDB and can be updated through a simple form either on the main webpage or on Heroku.",
+      "solution": "To modify the API, go to: https://hairsalonapi.herokuapp.com/ <br/>As this project is rendered client-side with dynamically generated content using Javascript, it is similar to many of the projects that I have done in the past. Therefore the front end of this project project was created first, using a local JSON file as a substitute for the API.<br/> Building the Schema for the API was a challenge as it was my first time designing one. In the end a nested Schema was implemented with the parent Schema holding category names, and the children being the services.<br/>Once I had a working JSON substitute I could begin work replicating it using MongoDB. After reading documentation on nested documents within MongoDB, it became fairly easy to program the RESTful API with all the necessary routes.<br/>As for the form input, I once again opted for hard-coded HTML - being entirely separated from the backend. My reasoning for this is so that the form would work exactly the same even if it was rendered on the main website.<br/>As a bit of fun, the form for editing the API was designed based on the recent trend of Neumorphism/ Soft UI/ Flatty UI.",
+      "bgColor": "#5a5046"
+    },
+    {
+      "id": "7",
+      "name": "UI/UX portfolio",
+      "technologies": "node.js express mongodb html css javasript",
+      "url": "https://full-stack-portfolio.herokuapp.com/",
+      "img": {
+        "webp": "../resources/img/fullstackportfolio.webp",
+        "gif": "../resources/img/fullstackportfolio.gif"
+      },
+      "brief": "To create a portfolio website using full stack technologies, namely Node.js, Express, and MongoDB. Primarily focussing on implementing a system for uploading, editing and deleting projects.",
+      "solution": "THE WEBSITE WILL HAVE NO PROJECTS BECAUSE OF HEROKU, YOU CAN ADD YOUR OWN THROUGH THE ADMIN PAGE.<br/><br/>The order of operations for this project involved completing the backend system first, supported by a basic, skeletal interface.<br/>What's done for the back end remains simple, with a dashboard for the user to access the respective new, edit and delete pages.<br/>The new page consists of a simple input form which posts to the MongoDB database on form submit.<br />Similarly, the edit page uses the same form template but populates the fields with the corresponding project information- ready for modifying.<br/>The delete page is required to prevent accidental deletion of data, and asks the user to reconfirm their delete request.<br/>Because the project upload may contain multiple files, a Node.js library called multer is used to handle the multi-part form, after which the files are saved directly to the file system, leaving the file path to be uploaded to the database.<br/>All of the HTML is rendered directly from the back end using EJS templating, allowing for a smooth integration between the HTML and the retrieved MongoDB data.<br/>The front end consists of just some basic CSS and Javascript, as the main focus of this project was to demonstrate and practice Node.js and MongoDB.",
+      "bgColor": "#c5e3e6"
+    },
+    {
+      "id": "6",
+      "name": "anime list",
+      "technologies": "react html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/animelist",
+      "img": {
+        "webp": "../resources/img/animelist.webp",
+        "gif": "../resources/img/animelist.gif"
+      },
+      "brief": "After finding a free public API with data from MyAnimeList, this project was born to improve upon the original website's lackluster user interface.<br /> The website must be a Single Page Application (SPA), have a home page, search page, user list page and anime info page. The results must also be paginated for a better user experience.<br />Some ideas that were drafted for this project include: SAO typography, vintage manga molour mrading, anime style background, Javascript background sparkle effect, bookshelf aesthetic.",
+      "solution": "To achieve the SPA with a unique anime info page, routing is required. Since hard coding a router with vanilla Javscript is labourious, React was chosen as the framework for both the dynamic content and the routing.<br />For this project, a full sitemap, wireframes, mockups, dataflow and pseudocode were considered which enabled a much smoother implementation of the features compared to previous projects.<br />Thankfully, the free API included many different endpoints for querying different things, for example: top upcoming, recently added, search all, and anime details. This made things easier albeit with duplicate code, as each different request can be made with a different function and endpoint path- each accessed via either an event listener or on route change.<br />One of the key functionalities in the website is the ability to save an anime to a unique watch list. To do this, each dynamically generated 'card' holds a unique ID which when clicked, appends the ID to a locally stored (localStorage) JSON array. Each ID is then queried when the user reaches the 'user list page' and cards are generated.<br /> Pagination is also included with the free API, so the application simply keeps a track of the page count and loads the correct page accordingly.<br />This project was a fantastic way for me to develop my skills in using a framework, in particular with the use of a Router. Also combining previously attained knowledge of Fetch APIs, localStorage and dynamic content.",
+      "bgColor": "#405458"
+    },
+    {
+      "id": "5",
+      "name": "blackjack progressive web app",
+      "technologies": "html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/blackjack",
+      "img": {
+        "webp": "../resources/img/blackjack.webp",
+        "gif": "../resources/img/blackjack.gif"
+      },
+      "brief": "A project initiated as a way to deal with burnout- a fun, refreshing game to develop before working on other more advanced projects.<br /> However, it quickly became a good way to learn about Progressive Web Apps, and implement it into what became a simple offline game.",
+      "solution": "I had wanted to create a card game using vanilla JS for a long time, namely Poker or Stop the Bus. However, when it came to executing I found that a simpler game would be better- hence Blackjack. <br />The later but more prominent stage of development was the addition of PWA- for this project, a very low level solution was employed involving a basic service worker and web app manifest. Effectively caching important files for offline use later. Further improvements in the future would involve using Workbox libraries for a faster, more reliable and more flexible solution. <br />Otherwise, the logic was created first utilising Game and Player classes, this helped to organise and handle different categories of actions. Soon a barebones game was completed, run using Node.js and Chrome Dev Tools. A UI class was then created to handle the rendering of elements onto the page, all of which is linked to the logic via inline onclick events. <br />This is where most of the complication began, in particular with handling the picture cards and ace cards both on the UI front, and in the logic. Hard coding intelligence to deal with the CPU decision and best case scenarios for ace definitely took the most effort.<br />The user experience still needs improving, in particular regarding the layout of the game. However, the core functionality is there and the project has fulfilled what I wished to gain from it.",
+      "bgColor": "#527f9c"
+    },
+    {
+      "id": "4",
+      "name": "omart",
+      "technologies": "html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/omart",
+      "img": {
+        "webp": "../resources/img/omart.webp",
+        "gif": "../resources/img/omart.gif"
+      },
+      "brief": "To create a fully functioning front-end for an e-commerce website.<br />To further develop skills in Javascript: JSON, Fetch API, LocalStorage, Classes, Parallax Scrolling.",
+      "solution": "Following on from an YouTube tutorial, the base of the website is built with simple HTML and CSS. This includes the navigation bar, navigation menu, landing page, product container, and product basket.<br />To imitate using a CMS databse, a local products.json file was created and populated with product data- ready to be fetched into the Javascript.<br />The concept behind the layout and user flow of the website is to have all the products accessible immediately on the front page, reducing the amount of user input. Thereafter, the user can apply filters to the product listings to be more specific in their search.<br />The responsive grid containing the products is built using CSS Grid - by using CSS Grid and the minmax property, the responsiveness could be achieved in one line of code.<br />The dynamic content is generated using JSX-like template literals, appended to the HTML elements using element.innerHTML.<br />For the basket functionality, I used client side local storage, saving the product id's within a JSON file which can be accessed even after browser refresh. ",
+      "bgColor": "#88683c"
+    },
+    {
+      "id": "3",
+      "name": "osomatsu",
+      "technologies": "html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/osomatsu",
+      "img": {
+        "webp": "../resources/img/osomatsu.webp",
+        "gif": "../resources/img/osomatsu.gif"
+      },
+      "brief": "To create a dynamic website which fetches data from an API, queries the data, and outputs dynamically created content to the DOM, using only Vanilla Javascript.",
+      "solution": "The solution required a public API for the data, Edamam's free developer Recipe API was chosen. <br />Using the Vanilla Javascript Fetch API, the data from the Edamam is be requested and parsed into a local object.<br />A query is generated via the input form and once submitted, alters the fetch location and the user gets the desired response.<br />Dynamic components are a series of Javascript createElement's and appendChild's, mapped through the response array to generate dynamic content.<br />It was originally intended to have an individual recipe page for each recipe when clicked, however my knowledge of routing was minimal at the time of creating this site, hence each recipe card only links to the original source.",
+      "bgColor": "#e0d3c8"
+    },
+    {
+      "id": "2",
+      "name": "caffeinated",
+      "technologies": "html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/caffeinated",
+      "img": {
+        "webp": "../resources/img/caffeinated.webp",
+        "gif": "../resources/img/caffeinated.gif"
+      },
+      "brief": "To create a simple, elegant coffee shop website with the goal of implementing an animated loading sequence with Javascript.",
+      "solution": "After some initial brainstorming, the idea behind the animation was to visualise coffee being poured into a cup, or filling up a container. <br />After skeleton of the website was built, it was decided that the animation would revolve around having the device window act as the cup/ container. <br />The body of the page is split 90% brown, 10% white to imitate the coffee and milk foam portions of a coffee, after which an animation is applied using transform: scaleY to begin stretching the div container across the screen. Other properties are also applied and removed accordingly using a setTimeout function, these include: opacity and overflow.",
+      "bgColor": "#424242"
+    },
+    {
+      "id": "1",
+      "name": "hong-kiu personal portfolio",
+      "technologies": "html css javasript",
+      "url": "https://www.hongkiu.co.uk/projects/v1",
+      "img": {
+        "webp": "../resources/img/v1.webp",
+        "gif": "../resources/img/v1.gif"
+      },
+      "brief": "My first attempt at creating a portfolio for myself. I wanted to showcase highlights of my photography, product design and development; as well as a simple about and contact page.<br />As most of my work had already been uploaded to Behance, this website would only serve as a polished portal to Behance through HTML links. <br/>The style of the website should be simple and minimalistic, as a personal design preference.",
+      "solution": "Taking inspiration from other portfolios sourced online, I opted for a barebones landing page consisting of only a navigation menu to the various pages of interest. <br />Each of the pages are coded separately with a unique bundle of files, however code is shared between them for a consistent look throughout.<br />Each portfolio page is created using flexbox for each of the portfolio items, made responsive thanks to flexwrap. <br />The background chosen for the landing page was chosen out of a selection of my landscape photographs. It was chosen based on its simplicity and the fact that it did not clutter the centre of the page. <br />From this background, the highlight colour of the entire webpage was chosen -green, the colour of the leaves. <br />This was a great project which helped me improve my Javascript skills further through many small animations, as well as a first attempt at a multi-page website. <br />It also helped me understand the limitations of using unique HTML and CSS files for each page within the website.",
+      "bgColor": "#c4e9ef"
+    },
+    {
+      "id": "0",
+      "name": "swallow inn",
+      "technologies": "html css javasript jquery",
+      "url": "https://www.hongkiu.co.uk/projects/swallowinn",
+      "img": {
+        "webp": "../resources/img/swallowinn.webp",
+        "gif": "../resources/img/swallowinn.gif"
+      },
+      "brief": "The client required a brand new website to establish their company's online prescence -specifying the need to display: a landing, menu, event info, and career info",
+      "solution": "End result is a single page, static website that is easy to navigate and use. Each section is clearly titled for increased of communication. <br />As a total beginner in my web development journey, this was a great project to further improve my core HTML and CSS skills while working for a client.",
+      "bgColor": "#0e4e38"
+    }
+  ]
+}
